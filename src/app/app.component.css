@@ -1,0 +1,14 @@
+.container{
+  width:300;
+  height: 200;
+  padding:80px;
+  background-color:rgb(233, 211, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid red
+}
+.row{
+  padding:80px;
+  background-color:rgb(226, 97, 172);
+  border:1px solid red}

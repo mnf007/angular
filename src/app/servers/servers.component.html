@@ -1,0 +1,43 @@
+<label>server name</label>
+<br>
+<input type="text" 
+class="form-controle"
+(input)="onUpdateServerName($event)" 
+[(ngModel)]="serverName"> 
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()">  add servers</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onReset()"> reset</button>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p *ngIf="allow">server was created in the name of {{serverName}}</p>
+<app-server></app-server>
+
+<h2>History</h2>     
+<ul *ngIf="!history"> 
+  <li *ngFor="let item of items">{{ item }}</li> 
+</ul>
+<p *ngIf="history">There is no history<p> 
+
+
+
+
+
+
+
+<!-- question -->
+<!-- <input type="text" 
+class="form-controle"
+(input)="onUpdateUserName($event)" 
+[(ngModel)]="userName">
+<button class="btn btn-primary" [disabled]="userName===''"
+(click)="onUpdateUserName($event)">  reset</button>
+<p>{{userName}}</p> -->
+
+<!-- 2. <p [innerText]="allowNewServer"></p>
+<p>: This is an HTML paragraph element.
+  [innerText]: This is an example of property binding in Angular. It binds the value of the allowNewServer property from the component (likely a TypeScript class) to the innerText property of the <p> element.
+  allowNewServer: This is assumed to be a property in the Angular component. The value of this property will be dynamically bound to the content of the <p> element. If allowNewServer changes in the component, the text inside the paragraph will be automatically updated.
+  In your Angular component, you would have something like this in the TypeScript code:
+  typescriptCopy codeexport class YourComponent {
+    allowNewServer: string = 'Some dynamic text'; // Initialize with a default value or retrieve dynamically
+  } -->
